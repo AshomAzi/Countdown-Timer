@@ -20,8 +20,12 @@ for i in range(time_limit, 0, -1):
     """Calculating for hours, we have 3600 seconds in 1 hour"""
     hours = int(i / 3600)
 
-    # printing the time to display with 0 padding using a format specifier(seconds:02)
-    print(f"{hours:02}:{minutes:02}:{seconds:02}")
+    # Creating the timer to display with 0 padding and also using the format specifier
+    timer = f"{hours:02}:{minutes:02}:{seconds:02}"
+
+    # Printing the timer while also overwriting the previous time displayed using the carriage return(\r).
+    print(timer, end="\r")
+
     # timer sleep for 1 second
     time.sleep(1)
 
